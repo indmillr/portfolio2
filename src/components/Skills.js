@@ -1,4 +1,5 @@
 import Carousel from "react-multi-carousel";
+import { Container, Row, Col } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
 import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
@@ -29,7 +30,7 @@ export const Skills = () => {
       <section className="skill" id="skills">
          <Container>
             <Row>
-               <Col>
+               <Col size={12}>
                   <div className="skill-bx">
                      <h2>Skills</h2>
                      <p>
@@ -43,19 +44,19 @@ export const Skills = () => {
                         className="skill-slider"
                      >
                         <div className="item">
-                           <img src={meter1} alt="Image" />
+                           <img src={meter1} alt="Meter 1" />
                            <h5>Web Development</h5>
                         </div>
                         <div className="item">
-                           <img src={meter2} alt="Image" />
+                           <img src={meter2} alt="Meter 2" />
                            <h5>Brand Identity</h5>
                         </div>
                         <div className="item">
-                           <img src={meter3} alt="Image" />
+                           <img src={meter3} alt="Meter 3" />
                            <h5>Logo Design</h5>
                         </div>
                         <div className="item">
-                           <img src={meter1} alt="Image" />
+                           <img src={meter1} alt="Meter 1" />
                            <h5>User Interface</h5>
                         </div>
                      </Carousel>
@@ -63,7 +64,7 @@ export const Skills = () => {
                </Col>
             </Row>
          </Container>
-         <img className="background-image-left" src={colorSharp} />
+         <img className="background-image-left" src={colorSharp} alt="" />
       </section>
    );
 };
