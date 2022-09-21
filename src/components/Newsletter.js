@@ -1,10 +1,24 @@
 import { Col, Row, Alert } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export const Newsletter = ({ subscribe, status, message }) => {
-   const [email, setEmail] = useState('');
-   const handleSubmit = () = {
+export const Newsletter = ({ onValidated, status, message }) => {
+   const [email, setEmail] = useState("");
 
+   useEffect(() => {
+      if (status === "success") clearFields();
+   }, [status]);
+
+   const handleSubmit = () => {
+      e.preventDefault();
+      email &&
+         email.indexOf("@") > -1 &&
+         onValidated({
+            EMAIL: email,
+         });
+   };
+
+   const clearFields = () => {
+      setEmail("");
    };
 
    return (
@@ -24,8 +38,13 @@ export const Newsletter = ({ subscribe, status, message }) => {
                <Col md={6} xl={7}>
                   <form onSubmit={handleSubmit}>
                      <div className="new-email-bx">
-                        <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email Adress" />
-                        <button type="submit">Submit</button> 
+                        <input
+                           value={email}
+                           type="email"
+                           onChange={(e) => setEmail(e.target.value)}
+                           placeholder="Email Adress"
+                        />
+                        <button type="submit">Submit</button>
                      </div>
                   </form>
                </Col>
