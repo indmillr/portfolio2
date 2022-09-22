@@ -1,46 +1,66 @@
 import { Container, Col, Row, Nav, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/img/color-sharp2.png";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+// import colorSharp2 from "../assets/img/color-sharp2.png";
+import calc from "../assets/img/calc.jpg";
+import drums from "../assets/img/drum_machine.jpg";
+import hiit from "../assets/img/hiit.jpg";
+import md from "../assets/img/markdown.jpg";
+import quotes from "../assets/img/quotes.jpg";
+import rps from "../assets/img/rps.jpg";
+import simon from "../assets/img/simon.jpg";
+import todo from "../assets/img/todo.jpg";
 
 export const Projects = () => {
    const projects = [
       {
-         title: "Business Startup",
-         description: "Design & Development",
-         imgUrl: projImg1,
+         title: "Calculator",
+         description: "JavaScript Calculator",
+         imgUrl: calc,
       },
       {
-         title: "Business Startup",
-         description: "Design & Development",
-         imgUrl: projImg2,
+         title: "Drum Machine",
+         description: "An interactive JavaScript Drum Machine",
+         imgUrl: drums,
       },
       {
-         title: "Business Startup",
-         description: "Design & Development",
-         imgUrl: projImg3,
+         title: "HIIT Timer",
+         description:
+            "An adjustable two-timer interface that automatically starts the next timer at the end of the previous timer",
+         imgUrl: hiit,
       },
       {
-         title: "Business Startup",
-         description: "Design & Development",
-         imgUrl: projImg1,
+         title: "Markdown Previewer",
+         description: "A live split-screen Markdown previewer",
+         imgUrl: md,
       },
       {
-         title: "Business Startup",
-         description: "Design & Development",
-         imgUrl: projImg2,
+         title: "Quote Generator",
+         description:
+            "A machine that randomly generates a quote from a local list of quotes/authors",
+         imgUrl: quotes,
       },
       {
-         title: "Business Startup",
-         description: "Design & Development",
-         imgUrl: projImg3,
+         title: "Rock/Paper/Scissors",
+         description:
+            "An interactive Rock/Paper/Scissors game against a randomized CPU opponent",
+         imgUrl: rps,
+      },
+      {
+         title: "Simon",
+         description:
+            "A rendition of the classic Simon game. Match patterns of colors and sounds to win.",
+         imgUrl: simon,
+      },
+      {
+         title: "To-Do List",
+         description:
+            "An editable to-do list built with Node and Postgres and styled using Bootstrap",
+         imgUrl: todo,
       },
    ];
 
    return (
-      <section className="project" id="project">
+      <section className="project" id="projects">
          <Container>
             <Row>
                <Col size={12}>
@@ -85,7 +105,6 @@ export const Projects = () => {
                </Col>
             </Row>
          </Container>
-         <img className="background-image-right" src={colorSharp2} />
       </section>
    );
 };
